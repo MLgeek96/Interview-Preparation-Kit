@@ -1,9 +1,9 @@
-Q1. What is the statistical power?
+## What is the statistical power?
 
 "Statistical power" refers to the power of a binary hypothesis, which is the probability that the test rejects the null hypothesis given that the alternative hypothesis is true. [1]
 
 
-Q2. Explain selection bias (with regard to a dataset, not variable selection). Why is it important? How can data management procedures such as missing data handling make it worse?
+## Explain selection bias (with regard to a dataset, not variable selection). Why is it important? How can data management procedures such as missing data handling make it worse?
 
 Selection bias is the phenomenon of selecting individuals, groups or data for analysis in such a way that proper randomization is not achieved, ultimately resulting in a sample that is not representative of the population.
 
@@ -19,7 +19,7 @@ Types of selection bias include:
 
 Handling missing data can make selection bias worse because different methods impact the data in different ways. For example, if you replace null values with the mean of the data, you adding bias in the sense that you’re assuming that the data is not as spread out as it might actually be.
 
-Q3. Provide a simple example of how an experimental design can help answer a question about behavior. How does experimental data contrast with observational data?
+## Provide a simple example of how an experimental design can help answer a question about behavior. How does experimental data contrast with observational data?
 
 Observational data comes from observational studies which are when you observe certain variables and try to determine if there is any correlation.
 
@@ -27,7 +27,7 @@ Experimental data comes from experimental studies which are when you control cer
 
 An example of experimental design is the following: split a group up into two. The control group lives their lives normally. The test group is told to drink a glass of wine every night for 30 days. Then research can be conducted to see how wine affects sleep.
 
-Q4. Is mean imputation of missing data acceptable practice? Why or why not?
+## Is mean imputation of missing data acceptable practice? Why or why not?
 
 Mean imputation is the practice of replacing null values in a data set with the mean of the data.
 
@@ -35,8 +35,7 @@ Mean imputation is generally bad practice because it doesn’t take into account
 
 Second, mean imputation reduces the variance of the data and increases bias in our data. This leads to a less accurate model and a narrower confidence interval due to a smaller variance.
 
-
-Q5. What is an outlier? Explain how you might screen for outliers and what would you do if you found them in your dataset. Also, explain what an inlier is and how you might screen for them and what would you do if you found them in your dataset.
+## What is an outlier? Explain how you might screen for outliers and what would you do if you found them in your dataset. Also, explain what an inlier is and how you might screen for them and what would you do if you found them in your dataset.
 
 An outlier is a data point that differs significantly from other observations.
 
