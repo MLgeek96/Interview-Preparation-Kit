@@ -52,6 +52,6 @@ Other methods include DBScan clustering, Isolation Forests, and Robust Random Cu
 An inlier is a data observation that lies within the rest of the dataset and is unusual or an error. Since it lies in the dataset, it is typically harder to identify than an outlier and requires external data to identify them. Should you identify any inliers, you can simply remove them from the dataset to address them.
 
 
-References
+## References
 [1] Power, Statistics, Wikipedia
 [2] Anthropic principle, Wikipedia
