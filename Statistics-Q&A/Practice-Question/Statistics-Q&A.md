@@ -8,7 +8,7 @@ P(A|B) probability that it’s raining given they're telling that it is raining
 P(B|A) probability that all 3 friends say that it's raining given it’s raining = (2/3)³ = 8/27
 
 Step 1: Solve for P(B)
-P(A|B) = P(B|A) * P(A) / P(B), can be rewritten as
+P(A|B) = P(B|A) * P(A) / P(B), can be rewritten as 
 P(B) = P(B|A) * P(A) + P(B|not A) * P(not A)
 P(B) = (2/3)³ * 0.25 + (1/3)³ * 0.75 = 0.25 * 8/27 + 0.75 * 1/27
 
@@ -42,6 +42,7 @@ Since we looking at the number of events (# of infections) occurring within a gi
 
 Null (H0): 1 infection per person-days
 Alternative (H1): >1 infection per person-days
+
 k (actual) = 10 infections
 lambda (theoretical) = (1/100)*1787
 p = 0.032372 or 3.2372% calculated using .poisson() in excel or ppois in R
@@ -86,7 +87,7 @@ PV = 0.0624 or 6.24%
 * Assume that there’s only you and one other opponent.
 * Also, assume that we want a 95% confidence interval. This gives us a z-score of 1.96.
 
-p-hat +/- z* sqrt((p-hat * (1-p-hat))/n)
+* p-hat +/- z* sqrt((p-hat * (1-p-hat))/n)
 
 p-hat = 60/100 = 0.6
 z* = 1.96
@@ -125,7 +126,7 @@ Since 70 is one standard deviation below the mean, take the area of the Gaussian
 
 ## In a population of interest, a sample of 9 men yielded a sample average brain volume of 1,100cc and a standard deviation of 30cc. What is a 95% Student’s T confidence interval for the mean brain volume in this new population?
 
-X-bar +/- t * s / sqrt(n)
+* X-bar +/- t * s / sqrt(n)
 
 Given a confidence level of 95% and degrees of freedom equal to 8, the t-score = 2.306
 Confidence interval = 1100 +/- 2.306*(30/3)
@@ -133,7 +134,7 @@ Confidence interval = [1076.94, 1123.06]
 
 ## A diet pill is given to 9 subjects over six weeks. The average difference in weight (follow up — baseline) is -2 pounds. What would the standard deviation of the difference in weight have to be for the upper endpoint of the 95% T confidence interval to touch 0?
 
-Upper bound = mean + t-score*(standard deviation/sqrt(sample size))
+* Upper bound = mean + t-score*(standard deviation/sqrt(sample size))
 0 = -2 + 2.306*(s/3)
 2 = 2.306 * s / 3
 s = 2.601903
@@ -141,9 +142,9 @@ Therefore the standard deviation would have to be at least approximately 2.60 fo
 
 ## In a study of emergency room waiting times, investigators consider a new and the standard triage systems. To test the systems, administrators selected 20 nights and randomly assigned the new triage system to be used on 10 nights and the standard system on the remaining 10 nights. They calculated the nightly median waiting time (MWT) to see a physician. The average MWT for the new system was 3 hours with a variance of 0.60 while the average MWT for the old system was 5 hours with a variance of 0.68. Consider the 95% confidence interval estimate for the differences of the mean MWT associated with the new system. Assume a constant variance. What is the interval? Subtract in this order (New System — Old System).
 
-(X1-bar - X2-bar) +/- t * Sp * sqrt(1/n1 + 1/n2)
-SE(X1-bar - X2-bar) = Sp * sqrt(1/n1 + 1/n2)
-Sp = sqrt(((n1-1) * s1² + (n2-1) * s2²)/(n1+n2-2))
+* (X1-bar - X2-bar) +/- t * Sp * sqrt(1/n1 + 1/n2)
+* SE(X1-bar - X2-bar) = Sp * sqrt(1/n1 + 1/n2)
+* Sp = sqrt(((n1-1) * s1² + (n2-1) * s2²)/(n1+n2-2))
 
 Confidence Interval = mean +/- t-score * standard error 
 mean = new mean — old mean = 3–5 = -2
@@ -155,9 +156,9 @@ confidence interval = [-2.75, -1.25]
 
 ## To further test the hospital triage system, administrators selected 200 nights and randomly assigned a new triage system to be used on 100 nights and a standard system on the remaining 100 nights. They calculated the nightly median waiting time (MWT) to see a physician. The average MWT for the new system was 4 hours with a standard deviation of 0.5 hours while the average MWT for the old system was 6 hours with a standard deviation of 2 hours. Consider the hypothesis of a decrease in the mean MWT associated with the new treatment. What does the 95% independent group confidence interval with unequal variances suggest vis a vis this hypothesis? (Because there’s so many observations per group, just use the Z quantile instead of the T.)
 
-(X1-bar - X2-bar) +/- z * Sp * sqrt(1/n1 + 1/n2)
-SE(X1-bar - X2-bar) = Sp * sqrt(1/n1 + 1/n2)
-Sp = sqrt(((n1-1) * s1² + (n2-1) * s2²)/(n1+n2-2))
+* (X1-bar - X2-bar) +/- z * Sp * sqrt(1/n1 + 1/n2)
+* SE(X1-bar - X2-bar) = Sp * sqrt(1/n1 + 1/n2)
+* Sp = sqrt(((n1-1) * s1² + (n2-1) * s2²)/(n1+n2-2))
 
 Assuming we subtract in this order (New System — Old System):
 mean = new mean — old mean = 4–6 = -2
