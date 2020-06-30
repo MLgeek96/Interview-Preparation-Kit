@@ -30,16 +30,17 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 def repetition(args):
-    char, count = 'A', 1
+    char, count, ans = 'A', 1, 1
 
     for character in args.dna_sequence:
         if character == char:
             count += 1
+            ans = max(count, ans)
         else:
             char = character 
             count = 1
             
-    logger.info(count)
+    logger.info(f"the length of the longest repetition is {ans}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Tools to find missing number")
