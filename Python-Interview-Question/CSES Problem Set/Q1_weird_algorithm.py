@@ -55,7 +55,7 @@ def weird_algorithm(args):
     logger.info(seq)
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Tools to estimate pi")
+    parser = argparse.ArgumentParser(description="Tools for weird algorithm")
     parser.add_argument('-n', dest="number", type=int, help="Integer input", required=True)
     args = parser.parse_args()
 
