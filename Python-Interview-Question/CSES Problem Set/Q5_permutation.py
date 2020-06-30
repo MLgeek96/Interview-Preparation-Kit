@@ -41,12 +41,13 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 def permutation(args):
-    permutation = ""
+    assert 1 <= args.number <= 10**6, "Please input a integer within this interval [1, 100000]"
 
-    if args.number == 1:
+    permutation = ""
+    if args.number == 1: ## base case
         permutation += "1"
         logger.info(permutation)
-    elif args.number == 2 or args.number == 3:
+    elif args.number == 2 or args.number == 3: ## base case
         logger.info("NO SOLUTION")
     elif args.number % 2 == 0:
         for num in range(2, args.number+1, 2):

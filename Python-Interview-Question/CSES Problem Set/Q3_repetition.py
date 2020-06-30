@@ -13,6 +13,7 @@ Print one integer: the length of the longest repetition.
 
 Constraints
 1 ≤ n ≤ 10^6
+
 Example
 
 Input:
@@ -30,8 +31,9 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 def repetition(args):
+    assert 1 <= len(args.dna_sequence) <= 10**6, "Please insert another DNA sequence whose length is between 1 to 10^6" 
+    
     char, count, ans = 'A', 1, 1
-
     for character in args.dna_sequence:
         if character == char:
             count += 1
@@ -39,7 +41,7 @@ def repetition(args):
         else:
             char = character 
             count = 1
-            
+
     logger.info(f"the length of the longest repetition is {ans}")
 
 if __name__ == "__main__":
