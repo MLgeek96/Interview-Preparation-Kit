@@ -43,7 +43,7 @@ def repetition(args):
     logger.info(f"the length of the longest repetition is {ans}")
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Tools to find missing number")
+    parser = argparse.ArgumentParser(description="Tools to find length of the longest repetition")
     parser.add_argument('-dna', dest="dna_sequence", type=str, help="DNA sequence", required=True)
     args = parser.parse_args()
 

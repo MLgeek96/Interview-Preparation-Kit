@@ -32,14 +32,11 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 def missing_number(args):
-    number = args.number
-    int_array = args.number_array
+    assert 2 <= args.number <= 2 * 10**5, "Please input another integer within the range [2, 200000]"
+    assert len(args.number_array) == args.number-1, "There are more than 1 missing number in the array"
 
-    assert 2 <= number <= 2 * 10**5, "Please input another integer within the range [2, 200000]"
-    assert len(int_array) == number-1, "There are more than 1 missing number in the array"
-
-    target_sum = int(number * (number+1) / 2)
-    current_sum = sum(int_array)
+    target_sum = int(args.number * (args.number+1) / 2)
+    current_sum = sum(args.number_array)
 
     missing_num = target_sum - current_sum
     

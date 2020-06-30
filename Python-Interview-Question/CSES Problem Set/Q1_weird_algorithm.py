@@ -36,10 +36,6 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 def weird_algorithm(args):
-    """
-    This method will simulate the execution of the algorithm for a given value of n.
-    """
-    
     assert 1 <= args.number <= 10**6, "Please input another integer within the range [1, 1000000]"
 
     num = args.number
