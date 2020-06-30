@@ -50,7 +50,7 @@ def weird_algorithm(args):
             num //= 2
         else:
             num = 3*num + 1
-        seq += f" --> {num}"
+        seq += f" {num}"
     
     logger.info(seq)
 
