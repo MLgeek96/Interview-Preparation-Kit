@@ -14,11 +14,11 @@ Input
 
 The first input line contains an integer t: the number of tests.
 
-After this, there are t lines, each containing integers y and x.
+After this, there are t lines, each containing integers x and y.
 
 Output
 
-For each test, print the number in row y and column x.
+For each test, print the number in row x and column y.
 
 Constraints
 1 ≤ t ≤ 10^5
@@ -46,10 +46,14 @@ logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()
 
 def number_spiral(args):
+    assert 1 <= args.number <= 10 ** 5 , "Please input an integer within range [1, 100000]"
+
     coordinates = {}
     for pair in args.number_array:
         x_coordinate, y_coordinate = pair.split(':')
         coordinates[int(x_coordinate)] = int(y_coordinate)
+
+    assert args.number == len(coordinates), "The size of the array doesn't match the number input"
 
     for x, y in coordinates.items():
         z = max(x, y)
