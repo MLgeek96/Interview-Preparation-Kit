@@ -58,7 +58,7 @@ def number_spiral(args):
     for x, y in coordinates.items():
         z = max(x, y)
         z2 = (z-1) ** 2
-        if z % 2 == 0:
+        if z % 2 == 0: 
             if y == z:
                 ans = z2 + x
             else:
@@ -70,7 +70,6 @@ def number_spiral(args):
                 ans = z2 + 2 * z - x
 
         logging.info(f"{ans}")
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Find the number in the spiral")
