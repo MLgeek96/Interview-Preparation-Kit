@@ -1,0 +1,9 @@
+# Environments
+.env
+.venv
+env/
+venv/
+
+*.exe
+*.pyc
+.vscode/settings.json

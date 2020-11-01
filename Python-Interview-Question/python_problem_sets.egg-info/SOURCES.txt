@@ -1,0 +1,7 @@
+README.md
+setup.py
+python_problem_sets.egg-info/PKG-INFO
+python_problem_sets.egg-info/SOURCES.txt
+python_problem_sets.egg-info/dependency_links.txt
+python_problem_sets.egg-info/requires.txt
+python_problem_sets.egg-info/top_level.txt
