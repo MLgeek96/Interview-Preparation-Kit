@@ -4,8 +4,6 @@ from leetcode.problem_sets.Q1_two_sums import two_sums
 print(two_sums.__doc__)
 
 def test_two_sums():
-   
-    
     nums = [2, 7, 11, 15]
     target = 9
     
