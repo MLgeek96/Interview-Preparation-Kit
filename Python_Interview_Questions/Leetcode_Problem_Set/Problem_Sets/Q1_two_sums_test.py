@@ -1,9 +1,7 @@
 import pytest 
 import sys
 
-from problem_sets.Q1_two_sums import two_sums
-
-sys.path.insert('../../')
+from leetcode_problem_set.Q1_two_sums import two_sums
 
 def test_two_sums():
     nums = [3,2,4]
