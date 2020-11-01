@@ -27,9 +27,16 @@ def two_sums(nums: List[int], target: int):
     • -109 <= target <= 109
     • Only one valid answer exists.
     """
+    assert 2 <= len(nums) <= 105, "Nums should have at least two elements and at most 105 elements"
     for i in range(len(nums)):
-        for j in range(len(nums) - i):
+        assert -109 <= nums[i] <= 109, "Element in nums should be between -109 and 109"
+    assert -109 <= target <= 109, "Target should be between -109 and 109"
+
+    for i in range(len(nums)):
+        for j in range(i + 1, len(nums)):
             if nums[i] + nums[j] == target:
                 return [i, j]
+
+    return None
 
     
