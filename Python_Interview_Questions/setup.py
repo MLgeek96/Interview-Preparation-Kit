@@ -20,5 +20,6 @@ setup(
         "Programming Language :: Python :: 3",
         "License :: Other / Proprietary License",
         "Operating System :: OS Independent"
-    ]
+    ],
+    python_requires='>=3.6',
 )

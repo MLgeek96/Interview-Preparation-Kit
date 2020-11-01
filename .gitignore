@@ -6,9 +6,11 @@ venv/
 
 *.exe
 *.pyc
+*.egg
 *.egg-info/
 .vscode/settings.json
 
 # Python
 .pytest_cache/
 __pycache__/
+
