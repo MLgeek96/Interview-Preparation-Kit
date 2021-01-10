@@ -35,7 +35,6 @@ def threeSum(nums: List[int]) -> List[List[int]]:
     nums.sort()
     nums_length = len(nums)
     ans = []
-    print(nums)
 
     for i in range(nums_length - 2):
         if i > 0 and nums[i] == nums[i - 1]:
