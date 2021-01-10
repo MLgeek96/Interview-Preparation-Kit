@@ -57,39 +57,27 @@ def intToRoman(num: int) -> str:
     assert 1 <= num <= 3999, "Given integer must be strictly between 1 and 3999"
     roman_numeral_to_integer = [
         ("M", 1000),
+        ("CM", 900),
         ("D", 500),
+        ("CD", 400),
         ("C", 100),
+        ("XC", 90),
         ("L", 50),
+        ("XL", 40),
         ("X", 10),
+        ("IX", 9),
         ("V", 5),
+        ("IV", 4),
         ("I", 1)
     ]
 
     ans = ""
     for roman_numeral, integer in roman_numeral_to_integer:
-        if num >= 900 and num <= 999:
-            ans += "CM"
-            num -= 900
-        elif num >= 400 and num <= 499:
-            ans += "CD"
-            num -= 400
-        elif num >= 90 and num <= 99:
-            ans += "XC"
-            num -= 90
-        elif num >= 40 and num <= 49:
-            ans += "XL"
-            num -= 40
-        elif num == 9:
-            ans += "IX"
-            num -= 9
-        elif num == 4:
-            ans += "IV"
-            num -= 4
-        while num // integer > 0 and num != 0:
+        while num // integer > 0:
             ans += roman_numeral
             num -= integer
 
     return ans
 
 if __name__ == "__main__":
-    print(intToRoman(1994))
+    print(intToRoman(9))
