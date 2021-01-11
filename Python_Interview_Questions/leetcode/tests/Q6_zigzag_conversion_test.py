@@ -1,6 +1,8 @@
 import pytest
 from leetcode.problem_sets.Q6_zigzag_conversion import convert
 
+print(convert.__doc__)
+
 def test_zigzag_conversion():
     s = "PAYPALISHIRING"
     numRows = 3

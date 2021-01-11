@@ -1,6 +1,8 @@
 import pytest
 from leetcode.problem_sets.Q13_roman_to_integer import romanToInt
 
+print(romanToInt.__doc__)
+
 def test_roman_to_integer():
     s = "III"
     assert romanToInt(s) == 3

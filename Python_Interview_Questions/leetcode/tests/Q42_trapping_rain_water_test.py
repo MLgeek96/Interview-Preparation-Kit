@@ -1,6 +1,8 @@
 import pytest
 from leetcode.problem_sets.Q42_trapping_rain_water import trap
 
+print(trap.__doc__)
+
 def test_trapping_rain_water():
     height = [4, 2, 0, 3, 2, 5]
     assert trap(height) == 9

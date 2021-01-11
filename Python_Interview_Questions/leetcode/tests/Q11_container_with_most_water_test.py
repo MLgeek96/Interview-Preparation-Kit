@@ -1,6 +1,8 @@
 import pytest
 from leetcode.problem_sets.Q11_container_with_most_water import container_with_most_water
 
+print(container_with_most_water.__doc__)
+
 def test_container_with_most_water():
     height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
     ans = container_with_most_water(height)

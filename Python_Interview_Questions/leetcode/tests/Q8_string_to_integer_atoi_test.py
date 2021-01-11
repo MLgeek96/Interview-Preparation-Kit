@@ -1,6 +1,8 @@
 import pytest
 from leetcode.problem_sets.Q8_string_to_integer_atoi import myAtoi
 
+print(myAtoi.__doc__)
+
 def test_string_to_integer_atoi():
     string_input = "42"
     ans = myAtoi(string_input)

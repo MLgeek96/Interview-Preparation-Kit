@@ -1,6 +1,7 @@
 import pytest 
 from leetcode.problem_sets.Q2_add_two_numbers import add_two_numbers, ListNode
 
+print(add_two_numbers.__doc__)
 
 def test_add_two_numbers():
     a = ListNode(2)

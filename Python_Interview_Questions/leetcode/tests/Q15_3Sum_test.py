@@ -1,6 +1,8 @@
 import pytest
 from leetcode.problem_sets.Q15_3Sum import threeSum
 
+print(threeSum.__doc__)
+
 def test_3Sum():
     nums = [-1, 0, 1, 2, -1, -4]
     assert threeSum(nums) == [[-1,-1,2],[-1,0,1]]
