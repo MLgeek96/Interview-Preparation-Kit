@@ -48,10 +48,7 @@ def convert(s: str, numRows: int) -> str:
         if counter == numRows - 1 or counter == 0:
             sign *= -1
         ans[counter].append(s[i])
-        if sign > 0:
-            counter += 1
-        else:
-            counter -= 1
+        counter += sign
 
     for index, char_list in enumerate(ans):
         ans[index] = "".join([char for char in char_list])
