@@ -33,7 +33,7 @@ def container_with_most_water(height: List[int]) -> int :
     Constraints:
     • n == height.length
     • 2 <= n <= 3 * 104
-    • 0 <= height[i] <= 3 * 104
+    • 0 <= height[i] <= 3 * 10 ** 4
 
     """
     assert 2 <= len(height) <= 3 * 104, "Length of height is strictly between 2 and 3 * 104"
