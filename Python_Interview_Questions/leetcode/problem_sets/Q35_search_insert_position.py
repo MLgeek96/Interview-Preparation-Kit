@@ -34,7 +34,7 @@ def searchInsert(nums: List[int], target: int) -> int:
     assert 1 <= len(nums) <= 10 ** 4, "Length of nums must be between 1 and 10 ** 4"
     for num in nums:
         assert -10 ** 4 <= num <= 10 ** 4, "Integer in nums must be between -10 ** 4 and 10 ** 4"
-    assert nums == nums.sort() and len(set(nums)) == len(nums), "Nums should contain distinct values sorted in ascending order"
+    assert nums == sorted(nums) and len(set(nums)) == len(nums), "Nums should contain distinct values sorted in ascending order"
     assert -10 ** 4 <= target <= 10 ** 4, "Target must be between -10 ** 4 and 10 ** 4"
 
     if target < min(nums):

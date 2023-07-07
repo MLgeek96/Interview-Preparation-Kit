@@ -28,5 +28,3 @@ def test_bad_nums():
 
     with pytest.raises(AssertionError):
         two_sums(nums, target)
-
-    

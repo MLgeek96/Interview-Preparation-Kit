@@ -38,5 +38,3 @@ def two_sums(nums: List[int], target: int) -> List[int]:
                 return [i, j]
 
     return None
-
-    

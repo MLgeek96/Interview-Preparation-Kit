@@ -14,7 +14,7 @@ setup(
     long_description_content_type="text/markdown",
     url="github.com/MLgeek96/Interview-Preparation-Kit",
     install_requires=[
-            'pytest'
+        'pytest'
     ],
     classifiers=[
         "Programming Language :: Python :: 3",

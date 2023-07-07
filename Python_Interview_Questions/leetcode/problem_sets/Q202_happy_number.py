@@ -34,3 +34,6 @@ def isHappy(n: int) -> bool:
         else:
             n = compute_value(n)
     return False
+
+def compute_value(num: int):
+    return sum(int(i) ** 2 for i in str(num))

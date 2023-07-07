@@ -20,6 +20,6 @@ def lengthOfLastWord(s: str) -> int:
 
     """
     assert 1 <= len(s) <= 10 ** 4, "Length of s must be between 1 and 10 ** 4"
-    assert re.search('[a-zA-Z]', s), "s should consist of only English letters and spaces"
+    assert re.search('[a-zA-Z ]', s), "s should consist of only English letters and spaces"
 
     return len(s.strip().split(' ')[-1])

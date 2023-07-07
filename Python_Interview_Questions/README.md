@@ -4,9 +4,11 @@ Package holds several python interview questions from online platform like Leetc
 
 Steps for Installation:
 1. Make sure you are in Interview-Preparation-Kit directory.
-2. Create virtual environment in this directory. 
+2. Create virtual environment in this directory.
     * `python3 -m venv env`
-3. Enter into virtual environment 
+3. Enter into virtual environment
     * `source env/bin/activate`
-4. Install python_interview_questions package by running 
+4. Install python_interview_questions package by running
     * `pip3 install -e Python_Interview_Questions/`
+5. You may run pytest for any specific problem when you have furnished your test cases
+    * `pytest -v Python_Interview_Questions/leetcode/test/Q7_reverse_integer_test.py`

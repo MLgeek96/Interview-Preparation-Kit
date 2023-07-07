@@ -6,7 +6,7 @@ def test_letter_combinations_of_a_phone_number():
     assert letterCombinations(digits) == ["ad","ae","af","bd","be","bf","cd","ce","cf"]
 
     digits = ""
-    assert letterCombinations(digits) == [""]
+    assert letterCombinations(digits) == []
 
     digits = "2"
     assert letterCombinations(digits) == ["a", "b", "c"]

@@ -22,7 +22,7 @@ def test_string_to_integer_atoi():
     string_input = "words and 987"
     ans = myAtoi(string_input)
 
-    assert ans == 987
+    assert ans == 0
 
     string_input = "-91283472332"
     ans = myAtoi(string_input)
