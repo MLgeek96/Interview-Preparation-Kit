@@ -30,15 +30,17 @@ def isPalindrome(s: str) -> bool:
     """
     assert 1 <= len(s) <= 2 * 10 ** 5, "Length of s must be between 1 and 2 * 10 ** 5"
     assert all(ord(char) < 128 for char in s), "s must consist only of printable ASCII characters"
-    
-    new_str = re.sub(r'[^a-zA-Z0-9]', '', s)
-    new_str = new_str.lower()
 
-    leftPointer, rightPointer = 0, len(new_str) - 1
-    while leftPointer < rightPointer:
-        if new_str[leftPointer] != new_str[rightPointer]:
-            return False
-        leftPointer += 1
-        rightPointer -= 1
+    # new_str = re.sub(r'[^a-zA-Z0-9]', '', s)
+    # new_str = new_str.lower()
 
-    return True
+    # leftPointer, rightPointer = 0, len(new_str) - 1
+    # while leftPointer < rightPointer:
+    #     if new_str[leftPointer] != new_str[rightPointer]:
+    #         return False
+    #     leftPointer += 1
+    #     rightPointer -= 1
+    # return True
+
+    s = [char.lower() for char in s if char.isalnum()]
+    return s == s[::-1]
