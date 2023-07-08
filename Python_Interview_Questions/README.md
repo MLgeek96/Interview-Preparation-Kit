@@ -11,4 +11,4 @@ Steps for Installation:
 4. Install python_interview_questions package by running
     * `pip3 install -e Python_Interview_Questions/`
 5. You may run pytest for any specific problem when you have furnished your test cases
-    * `pytest -v Python_Interview_Questions/leetcode/test/Q7_reverse_integer_test.py`
+    * `pytest -v -s Python_Interview_Questions/leetcode/tests/Q7_reverse_integer_test.py`
