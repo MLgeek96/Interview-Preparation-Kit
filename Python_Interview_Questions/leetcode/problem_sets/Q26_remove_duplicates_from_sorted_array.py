@@ -57,7 +57,3 @@ def removeDuplicates(nums: List[int]) -> int:
             nums[unique_values] = nums[index]
 
     return unique_values + 1
-
-
-if __name__=="__main__":
-    print(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))

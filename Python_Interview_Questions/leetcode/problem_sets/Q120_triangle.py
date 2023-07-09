@@ -28,9 +28,6 @@ def minimumTotal(triangle: List[List[int]]) -> int:
 
     Follow up: Could you do this using only O(n) extra space, where n is the total number of rows in the triangle?
     """
-    # if len(triangle) == 1:
-    #     return triangle[0][0]
-
     for row in reversed(triangle[:-1]):
         rowIndex = triangle.index(row)
         for index, _ in enumerate(row):
