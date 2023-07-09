@@ -30,15 +30,14 @@ def minPathSum(grid: List[List[int]]) -> int:
         for j in range(n):
             assert 0 <= grid[i][j] <= 200, "Number in grid must be between 0 and 200"
 
-    result = grid
     for rowIdx in range(len(grid)):
         for colIdx in range(len(grid[rowIdx])):
             if rowIdx == 0 and colIdx == 0:
                 continue
             elif rowIdx == 0 and colIdx > 0:
-                result[rowIdx][colIdx] += result[rowIdx][colIdx - 1]
+                grid[rowIdx][colIdx] += grid[rowIdx][colIdx - 1]
             elif rowIdx != 0 and colIdx == 0:
-                result[rowIdx][colIdx] += result[rowIdx - 1][colIdx]
+                grid[rowIdx][colIdx] += grid[rowIdx - 1][colIdx]
             else:
-                result[rowIdx][colIdx] += min(result[rowIdx - 1][colIdx], result[rowIdx][colIdx - 1])
-    return result[-1][-1]
+                grid[rowIdx][colIdx] += min(grid[rowIdx - 1][colIdx], grid[rowIdx][colIdx - 1])
+    return grid[-1][-1]
