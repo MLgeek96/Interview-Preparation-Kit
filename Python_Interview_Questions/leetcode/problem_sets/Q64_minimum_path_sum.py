@@ -31,7 +31,7 @@ def minPathSum(grid: List[List[int]]) -> int:
             assert 0 <= grid[i][j] <= 200, "Number in grid must be between 0 and 200"
 
     result = grid
-    for rowIdx, _ in enumerate(grid):
+    for rowIdx in range(len(grid)):
         for colIdx in range(len(grid[rowIdx])):
             if rowIdx == 0 and colIdx == 0:
                 continue
