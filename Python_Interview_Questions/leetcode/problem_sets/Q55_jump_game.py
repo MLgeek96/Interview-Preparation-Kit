@@ -23,7 +23,13 @@ def canJump(nums: List[int]) -> bool:
     assert 1 <= len(nums) <= 10 ** 4
     for num in nums:
         assert 0 <= num <= 10 ** 5
-        
+
+    # goal = len(nums) - 1
+    # for i in reversed(range(len(nums))):
+    #     if i + nums[i] >= goal:
+    #         goal = i
+    # return not goal
+
     # dp = [False] * len(nums)
     # dp[-1] = True
 
@@ -38,3 +44,4 @@ def canJump(nums: List[int]) -> bool:
         curr -= 1
         curr = max(curr, nums[i])
     return True
+
