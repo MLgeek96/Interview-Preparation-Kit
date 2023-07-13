@@ -1,6 +1,8 @@
 import pytest
 from leetcode.problem_sets.Q238_product_of_array_except_self import productExceptSelf
 
+print(productExceptSelf.__doc__)
+
 def test_productExceptSelf():
     nums = [1,2,3,4]
     assert productExceptSelf(nums) == [24,12,8,6]
