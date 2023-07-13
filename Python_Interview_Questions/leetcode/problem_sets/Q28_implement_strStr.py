@@ -33,8 +33,6 @@ def strStr(haystack: str, needle: str) -> int:
     for i in range(len(haystack)):
         if haystack[i: i + length_needle] == needle:
             return i
-        elif i == len(haystack) - length_needle:
-            continue
     return -1
 
 
