@@ -16,19 +16,19 @@ def generateParenthesis(n: int) -> List[str]:
     • 1 <= n <= 8
     """
     assert 1 <= n <= 8
-    
-    def dfs(left, right, s):
+
+    def backtrack(left, right, s):
         if len(s) == n * 2:
             resultList.append(s)
         
         if left < n:
-            dfs(left + 1, right, s + "(")
+            backtrack(left + 1, right, s + "(")
 
         if right < left:
-            dfs(left, right + 1, s + ")")
+            backtrack(left, right + 1, s + ")")
 
     resultList = []
-    dfs(0, 0, "")
+    backtrack(0, 0, "")
 
     return resultList
 

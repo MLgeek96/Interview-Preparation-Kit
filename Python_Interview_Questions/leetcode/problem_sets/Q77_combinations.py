@@ -23,17 +23,17 @@ def combine(n: int, k: int) -> List[List[int]]:
     """
     assert 1 <= n <= 20
     assert 1 <= k <= n
-    
-    def dfs(startIdx, combinationList):
+
+    def backtrack(startIdx, combinationList):
         if len(combinationList) == k:
             resultList.append(combinationList[:])
         
         for i in range(startIdx, n + 1):
             combinationList.append(i)
-            dfs(i + 1, combinationList)
+            backtrack(i + 1, combinationList)
             combinationList.pop()
 
     resultList = []
-    dfs(1, [])
+    backtrack(1, [])
 
     return resultList
