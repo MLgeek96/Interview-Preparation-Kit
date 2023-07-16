@@ -30,7 +30,7 @@ def insert(intervals: List[List[int]], newInterval: List[int]) -> List[List[int]
         assert len(interval) == 2
         assert 0 <= interval[0] <= interval[1] <= 10 ** 5
     for i in range(1, len(intervals)):
-        assert intervals[i - 1][0] <= intervals[i][0]
+        assert intervals[i - 1][0] <= intervalsa[i][0]
     assert len(newInterval) == 2
     assert 0 <= newInterval[0] <= newInterval[1] <= 10 ** 5
 
