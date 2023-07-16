@@ -15,6 +15,8 @@ def generateParenthesis(n: int) -> List[str]:
     Constraints:
     • 1 <= n <= 8
     """
+    assert 1 <= n <= 8
+    
     def dfs(left, right, s):
         if len(s) == n * 2:
             resultList.append(s)
