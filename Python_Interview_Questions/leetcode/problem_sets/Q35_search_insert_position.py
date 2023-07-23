@@ -37,13 +37,28 @@ def searchInsert(nums: List[int], target: int) -> int:
     assert nums == sorted(nums) and len(set(nums)) == len(nums), "Nums should contain distinct values sorted in ascending order"
     assert -10 ** 4 <= target <= 10 ** 4, "Target must be between -10 ** 4 and 10 ** 4"
 
-    if target < min(nums):
-        return 0
-    elif target > max(nums):
-        return len(nums)
-    else:
-        for index, num in enumerate(nums):
-            if num == target:
-                return index
-            elif nums[index] < target < nums[index + 1]:
-                return index + 1
+    # if target < min(nums):
+    #     return 0
+    # elif target > max(nums):
+    #     return len(nums)
+    # else:
+    #     for index, num in enumerate(nums):
+    #         if num == target:
+    #             return index
+    #         elif nums[index] < target < nums[index + 1]:
+    #             return index + 1
+    
+    leftPointer = 0
+    rightPointer = len(nums) - 1
+
+    while leftPointer <= rightPointer:
+        midPointer = (rightPointer + leftPointer) // 2
+
+        if nums[midPointer] == target:
+            return midPointer
+        elif nums[midPointer] > target:
+            rightPointer = midPointer - 1
+        else:
+            leftPointer = midPointer + 1
+
+    return leftPointer
