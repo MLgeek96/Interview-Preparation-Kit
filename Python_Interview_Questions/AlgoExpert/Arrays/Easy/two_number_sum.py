@@ -1,4 +1,5 @@
 from typing import List
+
 def twoNumberSum(array: List[int], targetSum: int):
     """
     Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. If
@@ -62,3 +63,52 @@ def twoNumberSum(array: List[int], targetSum: int):
         else:
             right -= 1
     return []
+
+if __name__ == "__main__":
+    array = [3, 5, -4, 8, 11, 1, -1, 6]
+    targetSum = 10
+    assert twoNumberSum(array, targetSum) == [11 , -1]
+
+    array = [4, 6]
+    targetSum = 10
+    assert twoNumberSum(array, targetSum) == [4, 6]
+
+    array = [4, 6, 1]
+    targetSum = 5
+    assert twoNumberSum(array, targetSum) == [4, 1]
+
+    array = [4, 6, 1, -3]
+    targetSum = 3
+    assert twoNumberSum(array, targetSum) == [6, -3]
+
+    array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    targetSum = 17
+    assert twoNumberSum(array, targetSum) == [8, 9]
+
+    array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 15]
+    targetSum = 18
+    assert twoNumberSum(array, targetSum) == [3, 15]
+
+    array = [-7, -5, -3, -1, 0, 1, 3, 5, 7]
+    targetSum = -5
+    assert twoNumberSum(array, targetSum) == [-5, 0]
+
+    array = [-21, 301, 12, 4, 65, 56, 210, 356, 9, -47]
+    targetSum = 163
+    assert twoNumberSum(array, targetSum) == [210, -47]
+
+    array = [-21, 301, 12, 4, 65, 56, 210, 356, 9, -47]
+    targetSum = 164
+    assert twoNumberSum(array, targetSum) == []
+
+    array = [3, 5, -4, 8, 11, 1, -1, 6]
+    targetSum = 15
+    assert twoNumberSum(array, targetSum) == []
+
+    array = [14]
+    targetSum = 15
+    assert twoNumberSum(array, targetSum) == []
+
+    array = [15]
+    targetSum = 15
+    assert twoNumberSum(array, targetSum) == []
