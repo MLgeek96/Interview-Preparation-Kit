@@ -3,14 +3,17 @@
 .venv
 env/
 venv/
+.DS_STORE
 
 *.exe
 *.pyc
 *.egg
 *.egg-info/
+.idea/
 .vscode/settings.json
 
 # Python
 .pytest_cache/
 __pycache__/
+
 

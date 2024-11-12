@@ -1,7 +1,6 @@
 import pytest
 from leetcode.problem_sets.Q1657_determine_if_two_strings_are_close import closeStrings
 
-
 print(closeStrings.__doc__)
 
 def test_determine_if_two_strings_are_close():
@@ -20,6 +19,3 @@ def test_determine_if_two_strings_are_close():
     word1 = "cabbba"
     word2 = "aabbss"
     assert closeStrings(word1, word2) == False
-
-
-
