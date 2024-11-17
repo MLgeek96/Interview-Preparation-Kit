@@ -29,6 +29,9 @@ def zigzagTraverse(array: List[List[int]]):
     Optimal Space & Time Complexity
     O(n) time | O(n) space - where n is the total number of elements in the two-dimensional array
     """
+    def isOutOfBounds(row, col, height, width):
+        return row < 0 or row > height or col < 0 or col > width
+
     height = len(array) - 1
     width = len(array[0]) - 1
     result = []
@@ -57,9 +60,6 @@ def zigzagTraverse(array: List[List[int]]):
                 row -= 1
                 col += 1
     return result 
-
-def isOutOfBounds(row, col, height, width):
-    return row < 0 or row > height or col < 0 or col > width
 
 if __name__ == "__main__":
     array = [

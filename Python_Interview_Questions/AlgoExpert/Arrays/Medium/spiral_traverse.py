@@ -59,10 +59,6 @@ def spiralTraverse(array: List[List[int]]):
     return result 
 
     # O(n) time | O(n) space - where n is the total number of elements in the array
-    result = []
-    spiralFill(array, 0, len(array) - 1, 0, len(array[0]) - 1, result)
-    return result 
-
     def spiralFill(array, startRow, endRow, startCol, endCol, result):
         if startRow > endRow or startCol > endCol:
             return 
@@ -84,6 +80,10 @@ def spiralTraverse(array: List[List[int]]):
             result.append(array[row][startCol])
         
         spiralFill(array, startRow + 1, endRow - 1, startCol + 1, endCol - 1, result)
+
+    result = []
+    spiralFill(array, 0, len(array) - 1, 0, len(array[0]) - 1, result)
+    return result 
 
 if __name__ == "__main__":
     array = [

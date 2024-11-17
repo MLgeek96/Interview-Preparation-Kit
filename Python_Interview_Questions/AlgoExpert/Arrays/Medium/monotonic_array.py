@@ -29,6 +29,12 @@ def isMonotonic(array: List[int]):
     O(n) time | O(1) space - where n is the length of the array
     """
     # O(n) time | O(1) space - where n is the length of the array
+    def breaksDirection(direction, previousInt, currentInt):
+        difference = currentInt - previousInt
+        if direction > 0:
+            return difference < 0
+        return difference > 0
+    
     if len(array) <= 2:
         return True 
     direction = array[1] - array[0]
@@ -39,12 +45,6 @@ def isMonotonic(array: List[int]):
         if breaksDirection(direction, array[i - 1], array[i]):
             return False 
     return True 
-
-    def breaksDirection(direction, previousInt, currentInt):
-        difference = currentInt - previousInt
-        if direction > 0:
-            return difference < 0
-        return difference > 0
 
     # O(n) time | O(1) space - where n is the length of the array
     isNonDecreasing = isNonIncreasing = True 
